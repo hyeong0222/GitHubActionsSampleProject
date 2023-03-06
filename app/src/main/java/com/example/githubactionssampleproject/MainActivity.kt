@@ -24,6 +24,8 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    // 유닛 테스트 실험
 }
 
 @Composable
