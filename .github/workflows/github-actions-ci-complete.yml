@@ -54,6 +54,9 @@ jobs:
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
 
+      - name: Runt lint
+        run: /gradlew ktlintCheck
+
       - name: Build assemble release apk
         run: ./gradlew assembleRelease
 
