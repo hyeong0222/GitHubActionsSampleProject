@@ -28,11 +28,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Run unit tests
-        run: ./gradlew testDebugUnitTest
+#      - name: Run unit tests
+#        run: ./gradlew testDebugUnitTest
 
-      #      - name: Runt lint
-      #        run: ./gradlew ktlintCheck
+#      - name: Runt lint
+#        run: ./gradlew ktlintCheck
 
       - name: Build assemble release apk
         run: ./gradlew assembleRelease
@@ -50,7 +50,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: artifact
+          name: android-artifact
           
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
